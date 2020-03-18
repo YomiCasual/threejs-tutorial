@@ -13,7 +13,7 @@ class App extends Component {
     var geometry = new THREE.BoxGeometry( 1,1,1);
     // var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
 
-    let texture = new THREE.TextureLoader().load('https://image.freepik.com/free-photo/blue-with-vignette-marble-texture-background-with-copy-space_23-2148327728.jpg')
+    let texture = new THREE.TextureLoader().load('./texture/blue-with-vignette-marble-textue')
 
    var material = new THREE.MeshBasicMaterial( { map: texture} );
 
