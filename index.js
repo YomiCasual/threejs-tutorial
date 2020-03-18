@@ -11,11 +11,13 @@ class App extends Component {
     renderer.setSize( window.innerWidth, window.innerHeight );
     document.body.appendChild( renderer.domElement );
     var geometry = new THREE.BoxGeometry( 1,1,1);
+
     // var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+    var texture = new THREE.TextureLoader().load( 'textures/land_ocean_ice_cloud_2048.jpg' );
 
-    let texture = new THREE.CubeTextureLoader().load('texture/crate.gif')
+     // immediately use the texture for material creation
+    var material = new THREE.MeshBasicMaterial( { map: texture } );
 
-   var material = new THREE.MeshBasicMaterial( { map: texture } );
 
     var cube = new THREE.Mesh( geometry, material );
     scene.add( cube );
