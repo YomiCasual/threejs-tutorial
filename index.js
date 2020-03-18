@@ -13,9 +13,9 @@ class App extends Component {
     var geometry = new THREE.BoxGeometry( 1,1,1);
     // var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
 
-    let texture = new THREE.TextureLoader().load('./texture/blue-with-vignette-marble-textue')
+    let texture = new THREE.CubeTextureLoader().load('texture/pattern.jpg')
 
-   var material = new THREE.MeshBasicMaterial( { map: texture} );
+   var material = new THREE.MeshBasicMaterial( { envMap: texture } );
 
     var cube = new THREE.Mesh( geometry, material );
     scene.add( cube );
